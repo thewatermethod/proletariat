@@ -1,0 +1,121 @@
+header#masthead{
+	
+	background: @proleple;
+	color: white;
+	text-transform: uppercase;
+	height: 60px;
+	//position: fixed;
+	width: 100%;
+
+	a,a:visited,a:active{
+		color: white;
+		border-bottom: none;
+	}
+
+	a:hover,a:active{
+		color: darken(white, 20%);
+		background: @proleple;
+	}
+
+	.site-title a{
+		text-align: left;
+	}
+	#menu-toggle-on{
+		text-align: right;
+	}
+	.site-title a, #menu-toggle-on{
+		text-decoration: none;
+		font-family: 'Work Sans', sans-serif;
+        width: 49%; 
+        font-size: 2em;
+   		display: inline-block;
+	    font-weight: bold;
+	    cursor: pointer;
+	    padding: 0 40px;
+	}	
+
+}
+
+@media(min-width: 1000px){
+	header#masthead{
+		position: fixed;
+		top: 0px;
+	}
+
+	header#masthead.is-shows{
+		top: 60px;
+	}
+
+	nav.main-navigation{
+		position: fixed;
+	}
+
+	div.shows{ 
+		position: fixed; 
+		width: 100%; 
+		margin: 0; 
+		top: 0px; 
+		left: 0; 
+		right: 0; 
+		height: 67px; 
+		background: #262626; 
+		color: white; 
+		font-family: Source Code Pro;
+		span{
+			width: 25%;
+			
+			&:first-of-type{
+				margin-left: 25%;
+			}
+		}
+
+		a{
+			color: white;
+			border-bottom: 1px dotted white;
+		}
+
+	}
+
+}
+
+@media(max-width: 1000px){
+	div.shows{
+		display: none;
+	}
+}
+
+@media(max-width: 900px){
+
+	header#masthead{
+		clear: both;
+		height: auto;
+
+		.site-title a, #menu-toggle-on{
+			width: auto;
+			font-size: 1.5em;
+			padding: 15px;
+		}	
+
+	}
+
+
+
+}
+
+@media(max-width: 400px){
+
+	header#masthead{
+		#menu-toggle-on{
+			float: right;
+			font-size: 1.25em;
+		}
+
+
+		.site-title a{
+			float: left;
+			font-size: 1em;
+		}	
+
+	}
+
+}
